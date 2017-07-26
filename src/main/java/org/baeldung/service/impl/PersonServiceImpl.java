@@ -1,7 +1,9 @@
-/*
-package org.baeldung.performancemonitor;
+package org.baeldung.service.impl;
 
-public class PersonService {
+import org.baeldung.performancemonitor.Person;
+import org.baeldung.service.PersonService;
+
+public class PersonServiceImpl implements PersonService{
 
     public String getFullName(Person person) {
         return person.getLastName() + " " + person.getFirstName();
@@ -13,4 +15,3 @@ public class PersonService {
     }
 }
 
-*/

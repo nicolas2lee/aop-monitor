@@ -18,6 +18,7 @@ public class PerfInterceptor implements MethodInterceptor {
     private static long methodWarningThreshold = 1000;
 
     public Object invoke(MethodInvocation method) throws Throwable {
+        logger.info("perf monitor");
         long start = System.currentTimeMillis();
         try {
             return method.proceed();

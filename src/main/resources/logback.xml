@@ -14,7 +14,7 @@
     <logger name="org.springframework.web.servlet.mvc" level="TRACE" />
     <logger name="org.springframework.aop.interceptor.PerformanceMonitorInterceptor" additivity="false" >
         <level value="TRACE"/>
-        <!--<appender-ref ref="STDOUT"/>-->
+        <appender-ref ref="STDOUT"/>
     </logger>
 
     <logger name="org.baeldung.performancemonitor.MyPerformanceMonitorInterceptor" additivity="false" >
