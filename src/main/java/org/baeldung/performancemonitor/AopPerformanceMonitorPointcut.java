@@ -18,7 +18,8 @@ public class AopPerformanceMonitorPointcut {
     @Pointcut("execution(* org.baeldung.service.impl.PersonServiceImpl.getAge(..))")
     public void myMonitor() { }
 
-    @Pointcut("org.baeldung.performancemonitor.AopPerformanceMonitorPointcut.myMonitor() || org.baeldung.performancemonitor.AopPerformanceMonitorPointcut.monitor()")
+    //@Pointcut("org.baeldung.performancemonitor.AopPerformanceMonitorPointcut.myMonitor() || org.baeldung.performancemonitor.AopPerformanceMonitorPointcut.monitor()")
+    @Pointcut("within(org.baeldung.service.impl.*)")
     public void entrypoint() { }
 
 
