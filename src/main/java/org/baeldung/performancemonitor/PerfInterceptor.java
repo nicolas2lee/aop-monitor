@@ -2,8 +2,8 @@ package org.baeldung.performancemonitor;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.log4j.Logger;
+
 
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class PerfInterceptor implements MethodInterceptor {
 
-    Logger logger = LoggerFactory.getLogger(PerfInterceptor.class.getName());
+    Logger logger = Logger.getLogger(PerfInterceptor.class);
     private static ConcurrentHashMap<String, MethodStats> methodStats = new ConcurrentHashMap<String, MethodStats>();
     private static long statLogFrequency = 10;
     private static long methodWarningThreshold = 1000;

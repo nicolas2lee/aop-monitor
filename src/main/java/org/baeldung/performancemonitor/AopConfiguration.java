@@ -2,9 +2,7 @@ package org.baeldung.performancemonitor;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.baeldung.service.CoordinateService;
 import org.baeldung.service.PersonService;
-import org.baeldung.service.impl.CoordinateServiceImpl;
 import org.baeldung.service.impl.PersonServiceImpl;
 import org.springframework.aop.Advisor;
 import org.springframework.aop.aspectj.AspectJExpressionPointcut;
@@ -26,16 +24,6 @@ public class AopConfiguration {
     @Bean
     public PersonService personService(){
         return new PersonServiceImpl();
-    }
-
-    @Bean
-    public Coordinate coordinate(){
-        return new Coordinate(1.0, 1.0);
-    }
-
-    @Bean
-    public CoordinateService coordinateService(){
-        return new CoordinateServiceImpl();
     }
 
 

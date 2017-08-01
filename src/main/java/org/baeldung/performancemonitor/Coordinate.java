@@ -7,11 +7,6 @@ public class Coordinate {
     private Double latitude;
     private Double longitude;
 
-    public Coordinate(Double latitude, Double longitude){
-        this.latitude = latitude;
-        this.longitude = longitude;
-    }
-
     public Double getLatitude() {
         return latitude;
     }

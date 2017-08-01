@@ -3,15 +3,16 @@ package org.baeldung.performancemonitor;
 
 import org.aopalliance.intercept.MethodInvocation;
 import org.apache.commons.logging.Log;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import org.apache.log4j.Logger;
 import org.springframework.aop.interceptor.AbstractMonitoringInterceptor;
 
 import java.util.Date;
 
 public class MyPerformanceMonitorInterceptor extends AbstractMonitoringInterceptor {
 
-    private static final Logger LOGGER  = LoggerFactory.getLogger( MyPerformanceMonitorInterceptor.class.getName() );
+    //private static final Logger LOGGER  = LoggerFactory.getLogger( MyPerformanceMonitorInterceptor.class.getName() );
+    private static final Logger LOGGER = Logger.getLogger(PerfInterceptor.class);
 
     public MyPerformanceMonitorInterceptor() {
     }
