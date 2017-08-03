@@ -9,7 +9,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
  */
 
 @Aspect
-@EnableAspectJAutoProxy
+//@EnableAspectJAutoProxy
 public class AopPerformanceMonitorPointcut {
     @Pointcut("execution(* org.baeldung.service.impl.PersonServiceImpl.getFullName(..))")
     public void monitor() { }
